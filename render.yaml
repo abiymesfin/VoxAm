@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: voxam-ai-backend
+    runtime: docker
+    rootDir: ai_backend
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: APP_ACCESS_TOKEN
+        generateValue: true
+      - key: ALLOW_NO_ACCESS_CODE
+        value: "false"
+      - key: CORS_ORIGINS
+        sync: false
+      - key: MAX_UPLOAD_MB
+        value: "100"
+      - key: MAX_VIDEO_SECONDS
+        value: "300"
+      - key: MAX_DUB_SEGMENTS
+        value: "36"
+      - key: FFMPEG_TIMEOUT_SECONDS
+        value: "180"

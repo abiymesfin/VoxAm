@@ -1,0 +1,5 @@
+[build]
+  publish = "frontend"
+
+# The frontend is a static HTML prototype. Keep the build command empty until
+# the code is migrated to a framework that requires a build step.
